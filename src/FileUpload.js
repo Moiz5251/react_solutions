@@ -27,11 +27,11 @@ function FileUpload({ onFileLoaded }) {
     };
 
     const handleDownloadSample = () => {
-        const sampleData = 'sku1\nsku2\nsku3\nsku100';
+        const sampleData = 'barcode1\nbarcode1\nbarcode1\nbarcode2\nbarcode2\nbarcode2\nbarcode3\n...\n...\n...\nbarcode100';
         const blob = new Blob([sampleData], { type: 'text/plain' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = 'sample-sku.txt';
+        link.download = 'sample-barcode.txt';
         link.click();
     };
 
@@ -71,7 +71,7 @@ function FileUpload({ onFileLoaded }) {
                 </Typography>
 
                 <Typography variant="body1" color="textSecondary" paragraph sx={{ fontFamily: 'Poppins, sans-serif' }}>
-                    Please upload a text file with a list of SKUs.
+                    Please upload a text file with a list of barcodes
                 </Typography>
 
                 {/* Download Sample File Button */}
@@ -81,7 +81,7 @@ function FileUpload({ onFileLoaded }) {
                     onClick={handleDownloadSample}
                     sx={{ mb: 2, fontFamily: 'Poppins, sans-serif' }}
                 >
-                    Download Sample File
+                    Download Sample Barcode File
                 </Button>
 
                 {/* File Upload Button */}

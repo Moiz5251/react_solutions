@@ -72,24 +72,16 @@ function App() {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://noonbarcode.com/save-user-data.php', {
-                name,
-                email,
-            });
-            
-            if (response.data?.message) {
-                alert(response.data.message);
-                setSubmitted(true);
-            } else {
-                throw new Error(response.data?.error || 'Unknown error');
-            }
+            // Make sure the URL is correct for local development
+            await axios.post('http://localhost:5000/api/save-user-data', { name, email });
+            setSubmitted(true); // Show thank you message upon successful submission
         } catch (error) {
-            console.error('Error saving data:', error.message);
-            alert('An error occurred: ' + error.message);
+            console.error('Error saving data:', error.response ? error.response.data : error.message);
+            alert('An error occurred: ' + (error.response ? error.response.data.error : error.message));
         }
     };
-    
 
+ 
     const closeModal = () => {
         setIsPopupOpen(false);
         setSubmitted(false); // Reset the submission state when closing modal

@@ -1,3 +1,15 @@
 5.193.43.151
 moizhussainmh53
-fuFEARtOxVlIu2I9
+PVb58hEQyYlz8d8Q
+db name - barcode_leads
+
+SMTP Password 
+moizsaify.ms@gmail.com
+yqimvnmoctsfphvg
+
+mongodb://atlas-sql-671ffa2d13a92849c6b05e21-6lysf.a.query.mongodb.net/barcode_leads?ssl=true&authSource=admin
+
+Database - barcode_leads
+
+
+mongodb+srv://moizhussainmh53:PVb58hEQyYlz8d8Q@barrcodegenerator.6lysf.mongodb.net
